@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import pickle
 import pandas as pd
+from data_model import water
 
 app = FastAPI(
     title = "Water Potability Prediction",
@@ -15,4 +16,6 @@ def index():
     return "welcome to water potability prediction"
 
 
-
+@app.post("/predict")
+def model_predict(water: water)
+    sample = pd.DataFrame()
